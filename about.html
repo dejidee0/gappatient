@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission</title>
+    <link rel="stylesheet" href="css/about.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKyV6YHuDhZTt_n3E9XKeuk_aFls0Ge1E&callback=initMap" async defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* Style the map to have a width and height */
+        #map {
+            height: 450px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+
+
+<body>
+
+    <div class="header-container">
+        <!-- Logo wrapped in an anchor tag pointing to the homepage -->
+         <a href="frontpage.html" class="logo-link">
+             <img src="images/logogreen-removebg-preview.png" alt="GAP Patient Transport Logo" class="logo">
+         </a>
+         <!-- Info Icon next to the logo -->
+         <!-- Info Icon with Tooltip next to the logo -->
+         <div class="info-icon-container">
+             <i class="fas fa-info-circle"></i>
+             <div class="info-text">Built and designed by Enemchukwu Victor Ejenam, call: 07950435159, email:ejenamenemchukwu@gmail.com</div>
+         </div>
+         <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+         <nav id="nav-menu">
+             <ul>
+                 <li><a href="transportnew.html">TRANSPORT</a></li>
+                 <li><a href="about.html">ABOUT</a></li>
+                 <li><a href="vacancypage.html">VACANCIES</a></li>
+                 <li><a href="contact.html">CONTACT US</a></li>
+             </ul>
+         </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content content-below-card">
+        <!-- Other content goes here -->
+    </div>
+
+    <div class="top-white-card">
+        <button class="call-button">
+            <a href="tel:+1234567890" class="phone-link">Call Us: +1 (234) 567-890</a>
+        </button>
+        <div class="service-text">
+            <p>WE OFFER 24 HOUR 7 DAY A WEEK SECURE TRANSPORT SERVICES CONTACT US TODAY</p>
+        </div>
+        <button class="email-button">
+            <a href="mailto:info@example.com" class="email-link">Email Us</a>
+        </button>
+    </div>
+
+
+
+    <div class="about-green-card">
+        <div class="about-white-card">
+            <h1 style="color: green;">About Us</h1>
+            <p>
+                <!-- Your text content here, with specific sentences in green -->
+                We are specialists in patient transfer. We provide home-to-hospital transfers, inter-medical facilities transfer (single journey or wait and return), support with court appearances, etc. for learning disability and mental health patients...
+                
+                <!-- ... other content ... -->
+    
+                <!-- Green sentences -->
+                <span class="green-text">WE ARE A CQC-REGULATED SERVICE</span><br>
+                <span class="green-text">CONTACT THE CQC ON 03000616161</span>
+            </p>
+        </div>
+    </div>
+
+
+<div class="footer">
+    GAP Patient Transport © All Rights Reserved.
+</div>
+   
+<script src="javascript/toggle.js"></script>
+</body>
+
+</html>

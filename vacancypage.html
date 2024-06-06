@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission</title>
+    <link rel="stylesheet" href="css/vacancypage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+
+
+<body>
+
+    <div class="header-container">
+        <!-- Logo wrapped in an anchor tag pointing to the homepage -->
+         <a href="frontpage.html" class="logo-link">
+             <img src="images/logogreen-removebg-preview.png" alt="GAP Patient Transport Logo" class="logo">
+         </a>
+         <!-- Info Icon next to the logo -->
+         <!-- Info Icon with Tooltip next to the logo -->
+         <div class="info-icon-container">
+             <i class="fas fa-info-circle"></i>
+             <div class="info-text">Built and designed by Enemchukwu Victor Ejenam, call: 07950435159, email:ejenamenemchukwu@gmail.com</div>
+         </div>
+         <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+         <nav id="nav-menu">
+             <ul>
+                 <li><a href="transportnew.html">TRANSPORT</a></li>
+                 <li><a href="about.html">ABOUT</a></li>
+                 <li><a href="vacancypage.html">VACANCIES</a></li>
+                 <li><a href="contact.html">CONTACT US</a></li>
+             </ul>
+         </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content content-below-card">
+        <!-- Other content goes here -->
+    </div>
+
+    <div class="top-white-card">
+        <button class="call-button">
+            <a href="tel:+1234567890" class="phone-link">Call Us: +1 (234) 567-890</a>
+        </button>
+        <div class="service-text">
+            <p>WE OFFER 24 HOUR 7 DAY A WEEK SECURE TRANSPORT SERVICES CONTACT US TODAY</p>
+        </div>
+        <button class="email-button">
+            <a href="mailto:info@example.com" class="email-link">Email Us</a>
+        </button>
+    </div>
+
+
+    <main>
+        <div class="container-vacancy">
+            <div class="image-container-vacancy">
+                <!-- Image placeholder, replace with your actual image -->
+                <img src="images/gap_woman.png" alt="Helping Hands" />
+            </div>
+            <div class="card-container-vacancy">
+                <div class="green-card-vacancy">
+                    <div class="text-content">
+                        <!-- <h1>Gap Patient Transport</h1> -->
+                       <!-- <p class="slogan">"We Fill the Gap, We Make the Difference"</p> -->
+                    </div>
+                    <div class="white-card-vacancy">
+                        <h1>Vacancies</h1>
+                        <p>A Private Transport service you can trust, at GAP Patient Transport we put the client at the heart of everything we do...</p>
+                        <ul>
+                            <li>Children & Young Persons Conveyance</li>
+                            <li>Working Age and Older Adults Conveyance</li>
+                            <li>Admissions & Discharge</li>
+                            <li>Emergency Department Attendance</li>
+                            <li>Section 135 (1 & 2) - 136 Conveyance to POS, Court Attendance</li>
+                            <li>Inter-hospital Transfers for both Informal and Mental Health Act (MCA) Detained Service Users</li>
+                        </ul>
+                        <!-- Add other texts and elements as needed -->
+                    </div>
+                   <!-- <button class="contact-button">CONTACT</button> -->
+                </div>
+            </div>
+        </div>
+    </main>   
+
+
+
+
+
+    <div class="green-card">
+        <div class="white-card">
+        <!--    <form id="contact-form" action="YOUR_SERVER_ENDPOINT" method="POST" enctype="multipart/form-data"> -->
+            <!--    <label for="name">Name:</label> -->
+            <!--    <input type="text" id="name" name="name" required> -->
+
+            <!--    <label for="email">Email:</label> -->
+            <!--    <input type="email" id="email" name="email" required> -->
+
+            <!--    <label for="sex">Sex:</label> -->
+            <!--    <select id="sex" name="sex"> -->
+            <!--        <option value="male">Male</option> -->
+            <!--        <option value="female">Female</option> -->
+            <!--        <option value="not_say">Prefer not to say</option> -->
+            <!--    </select> -->
+
+
+                <div class="download-section">
+                    <a href="forms/GAP Application Form - Support Staff.docx" download="Application-Form.docx" class="download-link">Download Application Form Support Worker</a>
+                </div>
+
+                <div class="download-section">
+                    <a href="forms/application-form.pdf" download="Application-Form.pdf" class="download-link">Download Application Form RMN (PDF)</a>
+                </div>
+
+                <div class="download-section">
+                    <a href="forms/Clinical Staff Questionnaire - All Staff.docx" download="Application-Form.docx" class="download-link">Download Clinical Staff Questionnaire</a>
+                </div>
+
+                <div class="download-section">
+                    <a href="forms/GAP REC HCA Compliance Matrix.docx" download="Application-Form.docx" class="download-link">Download HCA Compliance Matrix</a>
+                </div>
+
+                <div> </div> </div>
+
+                <div class="checklist-container">
+                    <div class="checklist-column">
+                        <label><input type="checkbox" class="checklist-item" name="checklist" value="a"> A</label>
+                        <label><input type="checkbox" class="checklist-item" name="checklist" value="b"> B</label>
+                        <label><input type="checkbox" class="checklist-item" name="checklist" value="c"> C</label>
+                        <!-- Add more checklist items as needed -->
+                    </div>
+                    <div class="checklist-column">
+                        <label><input type="checkbox" class="checklist-item" name="checklist" value="d"> D</label>
+                        <label><input type="checkbox" class="checklist-item" name="checklist" value="e"> E</label>
+                        <label><input type="checkbox" class="checklist-item" name="checklist" value="f"> F</label>
+                    </div>
+                    <div class="checklist-column">
+                        <label><input type="checkbox" class="checklist-item" name="checklist" value="g"> G</label>
+                        <label><input type="checkbox" class="checklist-item" name="checklist" value="h"> H</label>
+                        <label><input type="checkbox" class="checklist-item" name="checklist" value="i"> I</label>
+                        <label><input type="checkbox" class="checklist-item" name="checklist" value="j"> J</label>
+                    </div>
+                    <label><input type="checkbox" id="confirmChecklist" name="checklist" value="confirm"> I have all documents ready to send.</label>
+                </div>
+
+            <!--    <label for="file1">Upload Document 1:</label> -->
+            <!--    <input type="file" id="file1" name="file1" required> -->
+
+            <!--    <label for="file2">Upload Document 2:</label> -->
+            <!--    <input type="file" id="file2" name="file2" required> -->
+
+            <!--    <label for="file3">Upload Document 3:</label> -->
+            <!--    <input type="file" id="file3" name="file3" required> -->
+
+            <!--    <div class="checklist"> -->
+            <!--        <label><input type="checkbox" id="confirmChecklist" name="checklist" value="confirm"> I have all documents ready to upload.</label> -->
+            <!--    </div> -->
+                
+                <div id="emailInstructions" style="display:none;">
+                    <p>Please send the above documents with your name to <a href="mailto:xyz@mail.com">xyz@mail.com</a> and call <a href="tel:123456986">123-456-986</a> to process your application.</p>
+                </div>
+                <script>
+                    // Function to check if all checkboxes are checked
+                    function areAllChecked() {
+                        const checklistItems = document.querySelectorAll('.checklist-item');
+                        return Array.from(checklistItems).every(checkbox => checkbox.checked);
+                    }
+                
+                    // Event listener for changes in the checklist
+                    document.querySelectorAll('.checklist-item').forEach((checkbox) => {
+                        checkbox.addEventListener('change', function() {
+                            const allChecked = areAllChecked();
+                            const confirmChecklist = document.getElementById('confirmChecklist');
+                            const emailInstructions = document.getElementById('emailInstructions');
+                            
+                            // If all checkboxes are checked and the confirm checkbox is checked
+                            if (allChecked && confirmChecklist.checked) {
+                                emailInstructions.style.display = 'block';
+                            } else {
+                                emailInstructions.style.display = 'none';
+                            }
+                        });
+                    });
+                
+                    // Also attach the event listener to the "I have all documents ready" checkbox
+                    document.getElementById('confirmChecklist').addEventListener('change', function() {
+                        const emailInstructions = document.getElementById('emailInstructions');
+                        if (this.checked && areAllChecked()) {
+                            emailInstructions.style.display = 'block';
+                        } else {
+                            emailInstructions.style.display = 'none';
+                        }
+                    });
+                </script>             
+
+            <!--    <button type="submit">Send</button> -->
+            </form>
+        </div>
+    </div>
+
+<div class="footer">
+    GAP Patient Transport © All Rights Reserved.
+</div>
+    
+<script src="javascript/toggle.js"></script>
+</body>
+
+
+</html>

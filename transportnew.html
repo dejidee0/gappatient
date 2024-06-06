@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission</title>
+    <link rel="stylesheet" href="css/transportnew.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+
+
+
+<body>
+
+    <div class="header-container">
+        <!-- Logo wrapped in an anchor tag pointing to the homepage -->
+         <a href="frontpage.html" class="logo-link">
+             <img src="images/logogreen-removebg-preview.png" alt="GAP Patient Transport Logo" class="logo">
+         </a>
+         <!-- Info Icon next to the logo -->
+         <!-- Info Icon with Tooltip next to the logo -->
+         <div class="info-icon-container">
+             <i class="fas fa-info-circle"></i>
+             <div class="info-text">Built and designed by Enemchukwu Victor Ejenam, call: 07950435159, email:ejenamenemchukwu@gmail.com</div>
+         </div>
+         <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+         <nav id="nav-menu">
+             <ul>
+                 <li><a href="transportnew.html">TRANSPORT</a></li>
+                 <li><a href="about.html">ABOUT</a></li>
+                 <li><a href="vacancypage.html">VACANCIES</a></li>
+                 <li><a href="contact.html">CONTACT US</a></li>
+             </ul>
+         </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content content-below-card">
+        <!-- Other content goes here -->
+    </div>
+
+    <div class="top-white-card">
+        <button class="call-button">
+            <a href="tel:+1234567890" class="phone-link">Call Us: +1 (234) 567-890</a>
+        </button>
+        <div class="service-text">
+            <p>WE OFFER 24 HOUR 7 DAY A WEEK SECURE TRANSPORT SERVICES CONTACT US TODAY</p>
+        </div>
+        <button class="email-button">
+            <a href="mailto:info@example.com" class="email-link">Email Us</a>
+        </button>
+    </div>
+
+
+
+
+
+
+    <main>
+        <div class="container">
+            <div class="image-container">
+                <!-- Image placeholder, replace with your actual image -->
+                <img src="images/gap ambluance.jpeg" alt="Helping Hands" />
+            </div>
+            <div class="card-container">
+                <div class="green-card">
+                    <div class="text-content">
+                        <h1>Gap Patient Transport</h1>
+                        <p class="slogan">"We Fill the Gap, We Make the Difference"</p>
+                    </div>
+                    <div class="white-card">
+                        <p>A Private Transport service you can trust, at GAP Patient Transport we put the client at the heart of everything we do...</p>
+                        <ul>
+                            <li>Children & Young Persons Conveyance</li>
+                            <li>Working Age and Older Adults Conveyance</li>
+                            <li>Admissions & Discharge</li>
+                            <li>Emergency Department Attendance</li>
+                            <li>Section 135 (1 & 2) - 136 Conveyance to POS, Court Attendance</li>
+                            <li>Inter-hospital Transfers for both Informal and Mental Health Act (MCA) Detained Service Users</li>
+                        </ul>
+                        <p class="highlight">WE REALLY DO FILL THE GAP AND MAKE A DIFFERENCE!</p>
+                        <div class="cqc-info">
+                            <img src="images/cqc.png" alt="CQC Logo" class="cqc-logo" />
+                            <p class="cqc-number">A CQC Regulated Service: Provider #1-8995330525</p>
+                        </div>
+                        <!-- Add other texts and elements as needed -->
+                    </div>
+                   <!-- <button class="contact-button">CONTACT</button> -->
+                </div>
+            </div>
+        </div>
+    </main>    
+<main>
+    <div class="core-values-section">
+        <h2 class="core-values-title">Our Core Values</h2>
+        <div class="values-container">
+            <div class="value-card green-card">
+                <img class="hide-bg" src="images/clockwhite.png" alt="Available" class="clock-icon">
+                <h3>AVAILABLE</h3>
+                <p>WE ARE A 24 HOUR, 7 DAY A WEEK PATIENT TRANSPORT SERVICE. WE ARE ALWAYS AVAILABLE TO MEET YOUR NEEDS.</p>
+            </div>
+            <div class="value-card black-card">
+                <img src="images/heart.png" alt="Caring">
+                <h3>CARING</h3>
+                <p>WE PUT OUR SERVICE USERS AT THE HEART OF EVERYTHING WE DO. WE CARE FOR OUR CLIENTS WELFARE.</p>
+            </div>
+            <div class="value-card grey-card">
+                <img src="images/flash.png" alt="Responsive">
+                <h3>RESPONSIVE</h3>
+                <p>WE KNOW THAT TIMING IS EVERYTHING. WE ARE A RESPONSIVE TRANSPORT SERVICE.</p>
+            </div>
+            <div class="value-card black-card">
+                <img src="images/safe.png" alt="Safe">
+                <h3>SAFE</h3>
+                <p>WE KNOW SECURITY IS IMPORTANT, WE PROVIDE PATIENT TRANSPORT THAT IS SAFE & RELIABLE.</p>
+            </div>
+            <div class="value-card green-card">
+                <img src="images/submission-20-removebg-preview.png" alt="Quality">
+                <h3>QUALITY</h3>
+                <p>WE EFFECTIVELY AND CONTINUALLY AUDIT OUR SYSTEMS IN ORDER TO ENSURE SERVICE PROVISIONS OF THE HIGHEST QUALITY.</p>
+            </div>
+        </div>
+    </div>    
+</main>
+
+<!-- Services Section -->
+<div class="services-section">
+    <h2 class="services-title">Services</h2>
+    <h3 class="services-subtitle">Includes but not limited to</h3>
+    <div class="green-card-container">
+        <div class="services-container">
+            <!-- Service Card 1 -->
+            <div class="service-card">
+                <p>Emergency Transport</p>
+                <button class="more-info-btn" onclick="toggleInfo(this)">More Info</button>
+                <div class="service-more-info">
+                    <p>Details about Emergency Transport...</p>
+                    <p>Details about Emergency Transport...</p>
+                    <p>Details about Emergency Transport...</p>
+                    <p>Details about Emergency Transport...</p>
+                <!--    <button class="close-btn" onclick="toggleInfo(this)">Close</button> -->
+                </div>
+            </div>
+            <!-- Repeat for all seven service cards with the button -->
+            <!-- Service Card 2 -->
+            <div class="service-card">
+                <p>Emergency Transport</p>
+                <button class="more-info-btn" onclick="toggleInfo(this)">More Info</button>
+                <div class="service-more-info">
+                    <p>Details about Emergency Transport...</p>
+                    <p>Details about Emergency Transport...</p>
+                    <p>Details about Emergency Transport...</p>
+                    <p>Details about Emergency Transport...</p>
+                <!--    <button class="close-btn" onclick="toggleInfo(this)">Close</button> -->
+                </div>
+            </div>
+            <!-- Additional service cards go here -->
+            <div class="service-card">
+                <p>Emergency Transport</p>
+                <button class="more-info-btn" onclick="toggleInfo(this)">More Info</button>
+                <div class="service-more-info">
+                    <p>Details about Emergency Transport...</p>
+                    <p>Details about Emergency Transport...</p>
+                    <p>Details about Emergency Transport...</p>
+                    <p>Details about Emergency Transport...</p>
+                <!--    <button class="close-btn" onclick="toggleInfo(this)">Close</button> -->
+                </div>
+            </div>        
+            <!-- ... -->
+        </div>
+    </div>
+</div>
+
+
+<!-- Mission Section -->
+<div class="misison-section">
+    <h2 class="mission-title">Mission Statement</h2>
+    <div class="green-card-mission">
+        <div class="white-mission">
+            <p>Our mission is...</p>
+            <!-- Add more content about your mission here -->
+        </div>
+    </div>
+</div>
+  
+
+<!-- Testimonials Section -->
+<div class="testimonials-section">
+    <h2 class="testimonials-title">What People Say About Us</h2>
+    <div class="green-card-container">
+        <div class="testimonials-container">
+            <div class="testimonial-card">
+                <img src="images/PP Male.png" alt="Male" class="testimonial-icon">
+                <p class="testimonial-name">Service User</p>
+                <p>John's experience was great, and he appreciated the service...</p>
+            </div>
+            <div class="testimonial-card">
+                <img src="images/PP Female.png" alt="Female" class="testimonial-icon">
+                <p class="testimonial-name">Ward Manager</p>
+                <p>Emily loved the friendly staff and the timely service...</p>
+            </div>
+            <div class="testimonial-card">
+                <img src="images/PP Male.png" alt="Person" class="testimonial-icon"> <!-- Replace with your third icon -->
+                <p class="testimonial-name">Gap Patient Transport Employee</p>
+                <p>Mike found the service to be exceptional and punctual...</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Comment Section -->
+<div class="comment-section-container">
+    <h2 class="have-your-say-title">Have Your Say</h2>
+    <div class="green-card comment-card">
+        <form id="comment-form" action="http://localhost:8080/submit_comment.php" method="POST">
+            <div class="user-type-container">
+                <label><input type="radio" name="user_type" value="employee" required> Employee</label>
+                <label><input type="radio" name="user_type" value="client" required> Client</label>
+                <label><input type="radio" name="user_type" value="service_user" required> Service User</label>
+            </div>
+            <div class="input-container">
+                <input type="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="textarea-container">
+                <textarea name="comment" placeholder="Write your comment here..." required></textarea>
+            </div>
+            <div class="captcha-container">
+                <div class="g-recaptcha" data-sitekey="6LdhOZUpAAAAADNoSp8i4EJsRltdeAN6w2fMjvsj"></div>
+            </div>
+            <div class="submit-container">
+                <button type="submit">Submit Comment</button>
+            </div>
+            <!-- Success Message Container -->
+            <div id="successMessage" class="success-message-container" style="display:none;"></div>
+
+
+                <!-- Add View Comments Button -->
+            <div class="view-comments-container">
+                <button id="viewComments" onclick="loadComments()">View Comments</button>
+            </div>
+            <div id="commentsSection" class="comments-display-container" style="display:none;">
+                <!-- Comments will be loaded here -->
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="comment_script.js"></script>
+<script src="javascript/toggle.js"></script>
+<script src="javascript/closebuttonMoreInfo.js"></script>
+</body>
+
+
+</html>

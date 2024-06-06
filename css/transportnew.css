@@ -1,0 +1,1048 @@
+/* Base styles */
+body {
+    background-color: #d3d3d3; /* This sets the general background to grey */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+
+
+    display: flex; /* Enable flexbox layout */
+    justify-content: center; /* Center the green card horizontally */
+    /* align-items: center; /* Center the green card vertically */
+    /* min-height: 100vh; /* Ensure the body takes full viewport height */
+    flex-direction: column; /* Stack children vertically by default */
+}
+
+.header-container {
+    background-color: #00AC13;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.logo-container {
+    flex: 0 0 auto; /* Do not allow the logo container to grow or shrink */
+}
+
+.logo {
+    max-width: 200px; /* Set a maximum width that looks balanced */
+    width: 100%; /* This will make it responsive */
+    height: auto; /* Maintain the aspect ratio */
+    margin-left: 20px; /* Adjust as needed for spacing */
+    margin-top: 5px; /* Optional: adjust as needed for vertical spacing */
+    margin-bottom: 5px; /* Optional: adjust as needed for vertical spacing */
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 30px; /* Adjust size as necessary */
+    color: white;
+    cursor: pointer;
+    right: 10px; /* Adjust as necessary */
+    top: 10px; /* Adjust as necessary */
+    z-index: 1001; /* Make sure the toggle is above other content */
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 20px 20px;
+}
+.nav-menu-visible {
+    display: flex !important; /* Force the menu to be visible */
+}
+
+.info-icon {
+    cursor: pointer;
+    margin-left: 10px; /* Adjust based on your layout */
+    display: inline-block;
+    color: #00AC13; /* Adjust the color as needed */
+    position: relative;
+}
+
+/* Container for the icon and the tooltip */
+.info-icon-container {
+    position: relative;
+    display: inline-block; /* Wrap the icon */
+    cursor: pointer;
+    color: #00AC13; /* Example color - change as needed */
+}
+
+/* The info icon from FontAwesome or similar */
+.info-icon-container .fa-info-circle {
+    color: #ffffff; /* Example color - change as needed */
+    margin-left: 10px; /* Space after the logo */
+    font-size: 1.5em; /* Icon size - change as needed */
+}
+
+/* The tooltip text, hidden by default */
+.info-icon-container .info-text {
+    visibility: hidden; /* Hide the tooltip by default */
+    width: 250px; /* Set the width of the tooltip */
+    background-color: #f9f9f9; /* Tooltip background color */
+    color: #333; /* Tooltip text color */
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 10px;
+    font-size: 0.8em; /* Smaller font size for the tooltip text */
+    
+    /* Positioning the tooltip */
+    position: absolute;
+    z-index: 1;
+    left: 100%; /* Position at the center of the icon */
+    top: 50%; /* Position below the icon */
+    transform: translateY(-50%); /* Adjust vertical centering */
+    white-space: normal; /* Allow text wrapping */
+    
+    max-width: 250px; /* Maximum width to fit within the card */
+    
+    /* Transition for the tooltip to appear smoothly */
+    transition: opacity 0.3s, visibility 0.3s
+    
+}
+
+/* The :hover state of the icon container changes the tooltip's visibility and opacity */
+.info-icon-container:hover .info-text {
+    visibility: visible; /* Show the tooltip */
+    opacity: 1; /* Fade in the tooltip */
+}
+
+
+
+
+
+
+
+
+
+
+/* call card start */
+.top-white-card {
+    background-color: white; /* Card with white background */
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Simple shadow for card effect */
+    width: 90%; /* Adjust as needed */
+    position: relative; /*This will pin the navbar to the top of the viewport */
+    top: 300px; /* Adjust this value based on actual height of .header-container */
+    left: 50%; /* Start at the center of the viewport horizontally */
+    /*transform: translateX(-50%); /* Shift back to truly center the element */
+    z-index: 1; /* Ensure it is below the header but above other content */
+    max-width: 1200px; /* Or your desired max width */
+    top: auto; /* Reset the 'top' property if it was set */
+    left: auto; /* Reset the 'left' property if it was set */
+    transform: none; /* Clear any transforms that were centering the fixed element */
+    margin-top: 10px; /* Adjust this value to the height of your header */
+    margin-bottom: 0; /* Remove the bottom margin */
+}
+
+.call-button, .email-button {
+    padding: 10px 20px;
+    background-color: #00AC13; /* Lemon green background */
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    border-top-right-radius: 15px; /* Curved corners if needed */
+    border-bottom-right-radius: 15px; /* Curved corners if needed */
+    border-top-left-radius: 15px; /* Curved corners if needed */
+    border-bottom-left-radius: 15px; /* Curved corners if needed */
+}
+
+.call-button:hover, .email-button:hover {
+    background-color: #32cd5b; /* A darker lemon green for hover effect */
+}
+
+.service-text {
+    flex-grow: 1;
+    text-align: center;
+    padding: 0 10px;
+}
+
+.top-white-card a.phone-link, .top-white-card a.email-link {
+    color: white; /* Ensuring the links are white to match the button text */
+    text-decoration: none; /* No underline for links */
+    display: block; /* Make the link fill the button for a larger clickable area */
+}
+
+.top-white-card .service-text .phone-number, .top-white-card .service-text .email-address {
+    color: #333; /* Color for the text inside the service-text */
+    margin: 5px 0; /* Space out the phone and email lines */
+}
+
+.top-white-card .service-text a {
+    color: #00AC13; /* Color for the links inside the service-text */
+    text-decoration: none; /* Optionally remove underline from links */
+}
+
+.top-white-card .service-text a:hover {
+    text-decoration: underline; /* Add underline on hover for better user indication */
+}
+/* call card end */
+
+
+
+
+
+/* Heading and first white card Responsive styles for smaller screens heading start */
+@media (max-width: 768px) {
+    .logo {
+        max-width: 100px; /* Set a smaller maximum width for small screens */
+        margin-left: 10px; /* Adjust as needed for spacing */
+        margin-top: 0; /* Adjust if necessary */
+        margin-bottom: 0; /* Adjust if necessary */
+    }
+    
+    #nav-menu {
+        position: absolute;
+        top: 60px; /* Height of the header */
+        left: 0;
+        right: 0;
+        background-color: #00AC13;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start; /* Align menu items to the start */
+        width: 100%;
+        padding-left: 20px; /* Padding to match the logo container */
+    }
+    
+    #nav-menu ul {
+        width: 100%;
+        flex-direction: column;
+        padding: 0;
+    }
+    
+    #nav-menu ul li {
+        width: 100%;
+        text-align: right;
+    }
+    
+    #nav-menu ul li a {
+        display: block;
+        padding: 10px 20px; /* Add horizontal padding */
+    }
+
+
+    /* This class is toggled on/off by the JavaScript */
+    .nav-menu-visible {
+        display: flex !important; /* Force the menu to be visible */
+        flex-direction: column;
+        position: absolute; /* Absolute positioning for the dropdown */
+        top: 50px; /* Adjust this value to the height of your header */
+        left: 0;
+        right: 0;
+        display: none;
+    }
+
+    #nav-icon {
+        display: block; /* Show the menu icon on small screens */
+    }
+
+    #nav-menu.nav-menu-visible {
+        display: flex; /* Ensure this matches the class toggled by JavaScript */
+    }
+
+
+
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start; /* Align items to the start of the container */
+        position: relative;
+    }
+
+    .logo-container {
+        order: -1; /* This ensures the logo stays on top */
+        width: 100%; /* Allow the logo container to fill the width */
+        display: flex;
+        justify-content: center; /* Space between logo and toggle menu or use center to center the logo when the nave is toggled*/
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute; /* Ensure it's positioned relative to its parent */
+        top: 10px; /* Adjust as necessary */
+        right: 10px; /* Adjust as necessary */
+
+    }
+
+
+    .nav-menu-visible + .top-white-card {
+        /* Remove or adjust styles that were previously positioning the card below the menu */
+        margin-top: 160px; /* Maintain the margin at the top */
+    }
+
+    #nav-menu.nav-menu-visible + .top-white-card {
+        margin-top: 160px; /* Adjust this value so it moves down when the toggle is open */
+    }
+    
+    
+    .content-container {
+        flex-direction: column;
+   }
+/* Responsive styles for smaller screens heading end */
+
+}
+
+
+
+/* Ensure the container for the following content starts below the fixed card */
+.main-content {
+    padding-top: 100px; /* Adjust this value to match the height of your fixed header */
+}
+
+.content-below-card {
+    padding-top: 100px; /* Adjust this value so the content starts below the fixed card */
+}
+
+
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; /* This will make the children of this container stretch to fill the container */
+    height: 100%;
+    padding: 0; /* Removed padding to close the gap */
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.image-container {
+    flex: 1; /* Flex property to take up only necessary space */
+    display: flex; /* To allow the image to be the same height as the container */
+}
+
+.image-container img {
+    width: 100%; /* Make the image take up all available width */
+    object-fit: cover; /* Cover will ensure the aspect ratio is maintained */
+    border-top-left-radius: 15px; /* Curved corners if needed */
+    border-bottom-left-radius: 15px; /* Curved corners if needed */
+}
+
+.card-container {
+    flex: 1; /* Flex property to take up the remaining space */
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add shadow to the card */
+    border-top-right-radius: 15px; /* Curved corners if needed */
+    border-bottom-right-radius: 15px; /* Curved corners if needed */
+}
+
+.green-card {
+    background-color:#00AC13; /* Green background for the card */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align children to the start (left) */
+    justify-content: center; /* Center children vertically */
+    padding: 20px;
+    position: relative; /* Relative positioning for absolute positioning of children */
+    border-radius: 15px; /* Adjust as necessary */
+    margin-left: -20px; /* Adjust this value to close the gap */
+    height: calc(100% - 40px); /* Adjust height to match the image minus padding */
+    padding-bottom: 60px; /* Add more padding at the bottom to make space for the button */
+}
+
+
+.text-content {
+    align-self: center; /* Center the text block horizontally */
+    max-width: 100%; /* Optional: limit the text block width */
+}
+
+.white-card {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px; /* Add space above the white card */
+    align-self: center; /* Center the white card horizontally */
+    border-radius: 10px; /* Adjust as necessary */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: add shadow */
+    z-index: 1; /* Ensure it sits above the green background */
+    margin-bottom: 80px; /* This margin pushes the button down, adjust as necessary */
+}
+
+.green-card h1, .green-card .slogan {
+    color: white;
+    margin: 0;
+    text-align: center; /* Center text horizontally */
+}
+
+.green-card .slogan {
+    font-style: italic;
+}
+
+.white-card p {
+    color: #010101;
+    margin-bottom: 1em;
+}
+
+.contact-button {
+    padding: 10px 20px;
+    background-color: white;
+    color: #00AC13;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 5px;
+    font-weight: bold;
+    align-self: start; /* Align the button to the start of the flex container */
+    position: absolute;
+    bottom: 20px; /* Position 20px from the bottom of the green card */
+    right: 20px; /* Position 20px from the right of the green card */
+}
+
+.contact-button:hover {
+    background-color: #45a049;
+}
+
+
+
+.highlight {
+    color: #4CAF50; /* Green color for the highlighted text */
+    font-weight: bold;
+}
+
+.cqc-info {
+    display: flex;
+    align-items: center;
+    margin-top: 20px; /* Adjust as needed */
+}
+
+.cqc-logo {
+    width: 100px; /* Adjust width as needed */
+    margin-right: 10px; /* Adjust spacing between logo and text as needed */
+}
+
+.cqc-number {
+    color: #333; /* Adjust text color as needed */
+}
+
+
+
+/* our core values */
+.core-values-section {
+    background-color: #d3d3d3; /* Grey background */
+    text-align: center;
+    padding: 50px 0;
+}
+
+.core-values-title {
+    color: #333; /* Dark text color for the title */
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.values-container {
+    display: flex;
+    justify-content: space-around; /* Optimal spacing between cards */
+    align-items: stretch; /* Align the cards vertically */
+    flex-wrap: nowrap; /* Prevent wrapping of flex items */
+    padding: 0 10px; /* Padding on sides */
+}
+
+
+.value-card {
+    display: flex; /* Enables flexbox */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: space-between; /* Center children vertically */
+    align-items: center; /* Center children horizontally */
+    flex: 1;   /*Flex grow equally */
+    margin: 0 10px; /* Margin between cards */
+    padding: 20px;
+    color: white; /* White text for content */
+    box-sizing: border-box; /* Box sizing adjusted for padding */
+    flex-grow: 1; /* Allow cards to grow equally */
+    background-clip: padding-box; /* Background only fills the padding area */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    border-radius: 0; /* Remove border-radius from all corners of all cards */
+    /*flex-basis: calc(33.333% - 20px); /* Adjust the percentage based on how many cards per row */
+    /*max-width: calc(33.333% - 20px); /* Adjust the width accordingly */
+    min-height: 400px; /* Adjust min height to ensure all cards are the same height */
+}
+
+
+
+/* Specific styles for 'Available' and 'Quality' cards */
+/*.value-card.green, .value-card.quality {
+    /*border-radius: 15px;  This adds border-radius to these cards 
+}*/
+
+/* Adjust the padding or margin of the value-cards as needed to maintain consistent height */
+.value-card h3, .value-card p {
+    margin: 10px 0; /* Adjust the margins as needed */
+}
+
+/* Ensure images/icons are aligned with the title */
+.value-card img {
+    align-self: center; /* Centers the icon horizontally */
+    margin-bottom: 15px; /* Add space below the icon */
+}
+
+.green-card {
+    background-color: #00AC13; /* Green background */
+    /*border-radius: 15px;*/
+}
+
+.black-card {
+    background-color: #000; /* Black background */
+}
+
+.grey-card {
+    background-color: #888; /* Grey background for variety */
+}
+
+.value-card img {
+    max-width: 100px; /* Example size, adjust as needed */
+    margin-bottom: 20px;
+}
+
+.value-card h3 {
+    font-size: 1.25em; /* Larger text for titles */
+    margin-bottom: 15px;
+}
+
+.value-card p {
+    font-size: 0.9em;
+    text-align: center; /* Center text within each card */
+}
+
+/* Specific styles for the 'grey' cards now changed to white */
+.value-card.grey-card{
+    background-color: #fff; /* White background */
+    color: #000; /* Black text color */
+}
+
+/* Specific styles for the 'green' cards now changed to white */
+.value-card.green-card{
+    background-color: #fff; /* White background */
+    color: #000; /* Black text color */
+}
+
+/* Adjust the colors for the icons if they are not visible on the white background */
+.value-card.green-card img {
+   /*filter: invert(100%); /* This inverts the colors of the images */
+}
+
+.clock-icon {
+    color: #0acd3a; /* The desired green color for the icon */
+    font-size: 2em; /* Adjust the size of the icon as needed */
+    /* Additional styling if needed */
+}
+
+
+
+
+
+
+/* Service Section Styles */
+.services-section {
+    background-color: #d3d3d3; /* Grey background */
+    padding: 50px 0;
+    text-align: center;
+}
+
+.services-title {
+    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.services-subtitle {
+    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.green-card-container {
+    background-color: #4CAF50; /* Green background */
+    padding: 20px;
+    margin: auto;
+    max-width: 1200px; /* Maximum width of the green card container */
+    box-sizing: border-box;
+}
+
+.services-container {
+    display: flex;
+    justify-content: space-around; /* Space out the cards evenly */
+    flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+    gap: 20px; /* Space between cards */
+}
+
+.service-card {
+    background-color: #fff; /* White background for the service cards */
+    color: #000; /* Black text color */
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    flex: 0 0 calc(14.2857% - 40px); /* Seven cards in a row, minus the gap */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    min-height: 200px; /* Minimum height for all cards */
+    position: relative; /* For absolute positioning of the button */
+}
+
+.more-info-btn {
+    padding: 10px 20px;
+    background-color: #333; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none;
+    border-radius: 5px; /* Optional border radius for button */
+    cursor: pointer;
+    align-self: center; /* Centers the button */
+    margin-top: 20px; /* Space from the text to the button */
+}
+
+
+.service-more-info {
+    background-color: #fff; /* White background */
+    color: #000; /* Black text color */
+    padding: 20px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    display: none; /* Hide initially */
+    z-index: 10; /* Ensure it's above other content */
+}
+
+
+.close-btn {
+    padding: 10px 20px;
+    background-color: #f44336; /* Red background for the close button */
+    color: #fff; /* White text color */
+    border: none;
+    cursor: pointer;
+    align-self: flex-start; /* Align to the start of the flex container */
+    margin-top: 20px;
+}
+
+
+
+
+
+/* Testimonials Section Styles */
+.testimonials-section {
+    background-color: #d3d3d3; /* Grey background */
+    padding: 50px 0;
+    text-align: center;
+}
+
+.testimonials-title {
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+
+.green-card-container {
+    background-color: #00AC13; /* Green background */
+    padding: 20px;
+    border-radius: 15px; /* Adjust if you want rounded corners */
+}
+
+.testimonials-container {
+    display: flex;
+    justify-content: space-around; /* Space out the cards evenly */
+    flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+    gap: 20px; /* Space between cards */
+}
+
+
+.testimonial-card {
+    background-color: #fff; /* White background for the testimonial cards */
+    color: #000; /* Black text color */
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    flex: 0 0 calc(33.333% - 40px); /* Three cards in a row, minus the gap */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    min-height: 200px; /* Minimum height for all cards */
+}
+
+
+.testimonial-icon {
+    width: 50px; /* Set a fixed width for your icons */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 15px;
+}
+/* Apply equal height to all cards */
+.testimonial-card {
+    height: 100%; /* Force cards to fill container height */
+}
+
+
+/* Footer */
+.footer {
+    background-color: #333333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+
+
+
+/* Add responsiveness for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        }
+
+    .image-container, .card-container {
+        width: 100%; /* Set width to full on smaller screens /
+        max-width: 100%; / Ensure that it doesn't exceed the width of the screen /
+        border-radius: 0; / Reset border-radius for mobile view */
+        }
+    
+        .image-container img {
+            height: auto; /* Set image height to auto to maintain aspect ratio on smaller screens */
+            border-top-left-radius: 15px; /* Curved corners at the top */
+            border-top-right-radius: 15px; /* Curved corners at the top */
+            border-bottom-left-radius: 0;
+        }
+        
+        .card-container {
+            margin-top: 0; /* Reset any margin above the card */
+        }
+        
+        .green-card, .white-card {
+            border-radius: 0; /* Reset border-radius for mobile view */
+        }
+        
+        .contact-button {
+            align-self: center; /* Center the button on mobile */
+            bottom: 20px; /* Ensure consistent spacing on smaller screens */
+            right: 20px;
+        }
+
+        .cqc-info {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    
+        .cqc-logo {
+            margin-bottom: 10px; /* Add some space below the logo on smaller screens */
+        }
+
+        .green-card {
+            padding-bottom: 20px; /* Adjust bottom padding on smaller screens */
+        }
+    
+        .white-card {
+            margin-bottom: 60px; /* Adjust bottom margin on smaller screens */
+        }
+
+        /* core values */
+        .values-container {
+            flex-direction: column;
+            align-items: center;
+            padding: 0; /* Remove vertical padding for the container on smaller screens */
+        }
+    
+        .value-card {
+            flex-basis: 80%; /* Full width cards on smaller screens */
+            margin-bottom: 20px;
+            width: 80%; /* Adjust the width for smaller screens */
+            margin: 20px 0; /* Add vertical margin for spacing */
+            border-radius: 0;
+        }
+
+        /*.value-card.available, .value-card.quality {
+            /*border-radius: 15px;  Ensure border-radius is applied on smaller screens 
+        }*/
+
+
+
+
+        /* Responsive Design Adjustments */
+
+        .testimonials-container {
+            justify-content: center; /* Center cards on smaller screens */
+        }
+    
+        .testimonial-card {
+            flex-basis: 100%; /* Full width cards on smaller screens */
+            margin-bottom: 20px;
+        }
+
+        .services-container {
+            justify-content: center; /* Center cards on smaller screens */
+        }
+    
+        .service-card {
+            flex-basis: 100%; /* Full width cards on smaller screens */
+            margin-bottom: 20px; /* Space between stacked cards */
+        }
+    
+    }
+    
+
+/* Adjustments for large screens */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px; /* Limit the maximum width of the container */
+        margin: auto; /* Center the container on large screens */
+        height: auto; /* Set height to auto to contain the children */
+        min-height: 100%; /* Ensure container takes at least 100% of the viewport height */
+        }
+        .image-container, .card-container {
+            flex: none; /* Disable flex grow/shrink */
+            width: 50%; /* Set both children to take up half of the container's width */
+        }
+        
+        .image-container {
+            max-width: 50%; /* Limit image container to half of the container width */
+        }
+        
+        .image-container img {
+            border-radius: 15px 0 0 15px; /* Curved corners on the left side only */
+        }
+        
+        .card-container {
+            width: 50%; /* Limit card container to half of the container width */
+        }
+        
+        .green-card {
+            border-radius: 0 15px 15px 0; /* Curved corners on the top right */
+        }
+        
+        .white-card {
+            border-radius: 15px 15px 15px 15px; /* Curved corners on the bottom right */
+        }
+ 
+        .call-button {
+            border-radius: 15px 15px 15px 15px; /* Curved corners on the bottom right */
+        }
+
+        .email-button {
+            border-radius: 15px 15px 15px 15px; /* Curved corners on the bottom right */
+        }
+
+        .values-container {
+            justify-content: space-between; /* Space out items evenly */
+        }
+
+        .value-card {
+            flex: 0 1 calc(20% - 40px); /* Adjust flex-basis to account for margins */
+            margin-bottom: 20px;
+            width: 80%; /* Adjust the width for smaller screens */
+            margin: 20px 0; /* Add vertical margin for spacing */
+            border-radius: 0;
+        }
+    
+    } 
+
+
+
+/* Add vertical margin for spacing */
+
+/* mission Section Styles */
+.misison-section {
+    background-color: #d3d3d3; /* Grey background */
+    padding: 50px 0;
+    text-align: center;
+}
+
+.mission-title {
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.green-card-mission {
+    background-color: #00AC13; /* Green background */
+    padding: 20px;
+    border-radius: 15px; /* Adjust if you want rounded corners */
+}
+
+.white-mission {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    width: 100%; /* The white card will take the full width of the green card container */
+    box-sizing: border-box;
+    margin-bottom: 20px; /* Space below the white card if you have other content */
+}
+
+
+
+
+
+
+
+
+
+
+/* Comment Section Styles */
+.comment-section-container {
+    background-color: #d3d3d3; /* Grey background */
+    padding: 50px 15px; /* Add padding and allow for inner horizontal padding for small screens */
+    text-align: center;
+}
+
+.have-your-say-title {
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.comment-card {
+    background-color: #00AC13; /* Green background */
+    display: flex; /* Use flexbox to center contents */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    padding: 20px;
+    border-radius: 15px; /* Adjust if you want rounded corners */
+    width: 100%;
+    max-width: 800px; /* Maximum width of the card */
+    margin: auto; /* Center the card */
+    box-sizing: border-box;
+}
+
+.comment-card form {
+    width: 100%; /* Full width form */
+}
+
+.comment-card .input-container,
+.comment-card .textarea-container,
+.comment-card .captcha-container,
+.comment-card .submit-container {
+    width: 100%; /* Full width for container */
+}
+
+/* Center the submit button */
+.comment-card .submit-container button {
+    margin: 10px auto; /* Auto margins for horizontal centering */
+    display: block; /* Block display to respond to margin auto */
+}
+
+
+.comment-card input[type="email"],
+.comment-card textarea {
+    width: calc(100% - 20px); /* Subtracting the total left and right padding */
+    max-width: 500px; /* Maximum width of the inputs */
+    margin: 10px 0; /* Spacing for top and bottom */
+}
+
+.comment-card .g-recaptcha {
+    margin-top: 0 auto; /* Margin for spacing */
+    display: flex;
+    justify-content: center; /* Center reCAPTCHA */
+}
+
+
+.comment-card button {
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Lemon green background */
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    width: 100%; /* Make the button full width */
+    box-sizing: border-box;
+}
+
+.comment-card button:hover {
+    background-color: #32cd5b; /* A darker lemon green for hover effect */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .comment-card {
+        max-width: 100%; /* Make the card full width on small screens */
+        border-radius: 0; /* Optional: remove border-radius for a full-width card on small screens */
+    }
+
+    .comment-card form {
+        gap: 15px; /* Increase space between form elements on small screens */
+    }
+}
+
+
+/* Additional Comment Section Styles */
+.view-comments-container {
+    text-align: center; /* Center the button */
+    padding-top: 20px; /* Space above the button */
+}
+
+#viewComments {
+    padding: 10px 20px;
+    background-color: #32cd5b; /* A lighter green background */
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    display: inline-block; /* Only as wide as necessary */
+    margin-top: 10px; /* Space from the form to the button */
+}
+
+#viewComments:hover {
+    background-color: #289e49; /* A darker green for hover effect */
+}
+
+.comments-display-container {
+    background-color: white; /* White background for the comments */
+    padding: 20px;
+    margin-top: 20px; /* Space between the button and comments section */
+    border-radius: 5px; /* Rounded corners for the comments display area */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    /* You might want to add more styles based on how you want to display the comments */
+}
+
+/* Responsive adjustments for View Comments */
+@media (max-width: 768px) {
+    .view-comments-container {
+        padding-top: 10px; /* Less space on small screens */
+    }
+
+    #viewComments {
+        width: 100%; /* Full width button on small screens */
+    }
+
+    .comments-display-container {
+        border-radius: 0; /* Optional: remove border-radius on small screens */
+    }
+
+    .comment-card {
+        border-radius: 0; /* Fit to the edge of the screen */
+        padding: 20px 10px; /* Smaller padding on smaller screens */
+    }
+
+    .comment-card {
+        /* Adjust scale as needed for smaller devices; 0.77 is an example and should be tested for the best fit */
+        transform: scale(0.77);
+    }
+}
+
+@media (max-width: 480px) {
+    .comment-card {
+        /* Further scale down for very small devices */
+        transform: scale(0.70);
+        margin-left: -25px; /* Increase negative margin if needed */
+    }
+}

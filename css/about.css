@@ -1,0 +1,357 @@
+/* Base styles */
+body {
+    background-color: #d3d3d3; /* This sets the general background to grey */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+
+
+    display: flex; /* Enable flexbox layout */
+    justify-content: center; /* Center the green card horizontally */
+    /* align-items: center; /* Center the green card vertically */
+    /* min-height: 100vh; /* Ensure the body takes full viewport height */
+    flex-direction: column; /* Stack children vertically by default */
+}
+
+.header-container {
+    background-color: #00AC13;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.logo-container {
+    flex: 0 0 auto; /* Do not allow the logo container to grow or shrink */
+}
+
+.logo {
+    max-width: 200px; /* Set a maximum width that looks balanced */
+    width: 100%; /* This will make it responsive */
+    height: auto; /* Maintain the aspect ratio */
+    margin-left: 20px; /* Adjust as needed for spacing */
+    margin-top: 5px; /* Optional: adjust as needed for vertical spacing */
+    margin-bottom: 5px; /* Optional: adjust as needed for vertical spacing */
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 30px; /* Adjust size as necessary */
+    color: white;
+    cursor: pointer;
+    right: 10px; /* Adjust as necessary */
+    top: 10px; /* Adjust as necessary */
+    z-index: 1001; /* Make sure the toggle is above other content */
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 20px 20px;
+}
+.nav-menu-visible {
+    display: flex !important; /* Force the menu to be visible */
+}
+
+
+.info-icon {
+    cursor: pointer;
+    margin-left: 10px; /* Adjust based on your layout */
+    display: inline-block;
+    color: #00AC13; /* Adjust the color as needed */
+    position: relative;
+}
+
+/* Container for the icon and the tooltip */
+.info-icon-container {
+    position: relative;
+    display: inline-block; /* Wrap the icon */
+    cursor: pointer;
+    color: #00AC13; /* Example color - change as needed */
+}
+
+/* The info icon from FontAwesome or similar */
+.info-icon-container .fa-info-circle {
+    color: #ffffff; /* Example color - change as needed */
+    margin-left: 10px; /* Space after the logo */
+    font-size: 1.5em; /* Icon size - change as needed */
+}
+
+/* The tooltip text, hidden by default */
+.info-icon-container .info-text {
+    visibility: hidden; /* Hide the tooltip by default */
+    width: 250px; /* Set the width of the tooltip */
+    background-color: #f9f9f9; /* Tooltip background color */
+    color: #333; /* Tooltip text color */
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 10px;
+    font-size: 0.8em; /* Smaller font size for the tooltip text */
+    
+    /* Positioning the tooltip */
+    position: absolute;
+    z-index: 1;
+    left: 100%; /* Position at the center of the icon */
+    top: 50%; /* Position below the icon */
+    transform: translateY(-50%); /* Adjust vertical centering */
+    white-space: normal; /* Allow text wrapping */
+    
+    max-width: 250px; /* Maximum width to fit within the card */
+    
+    /* Transition for the tooltip to appear smoothly */
+    transition: opacity 0.3s, visibility 0.3s
+    
+}
+
+/* The :hover state of the icon container changes the tooltip's visibility and opacity */
+.info-icon-container:hover .info-text {
+    visibility: visible; /* Show the tooltip */
+    opacity: 1; /* Fade in the tooltip */
+}
+
+
+
+
+
+
+
+
+/* call card start */
+.top-white-card {
+    background-color: white; /* Card with white background */
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Simple shadow for card effect */
+    width: 90%; /* Adjust as needed */
+    position: relative; /*This will pin the navbar to the top of the viewport */
+    top: 300px; /* Adjust this value based on actual height of .header-container */
+    left: 50%; /* Start at the center of the viewport horizontally */
+    /*transform: translateX(-50%); /* Shift back to truly center the element */
+    z-index: 1; /* Ensure it is below the header but above other content */
+    max-width: 1200px; /* Or your desired max width */
+    top: auto; /* Reset the 'top' property if it was set */
+    left: auto; /* Reset the 'left' property if it was set */
+    transform: none; /* Clear any transforms that were centering the fixed element */
+    margin-top: 10px; /* Adjust this value to the height of your header */
+    margin-bottom: 0; /* Remove the bottom margin */
+}
+
+.call-button, .email-button {
+    padding: 10px 20px;
+    background-color: #00AC13; /* Lemon green background */
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    border-top-right-radius: 15px; /* Curved corners if needed */
+    border-bottom-right-radius: 15px; /* Curved corners if needed */
+    border-top-left-radius: 15px; /* Curved corners if needed */
+    border-bottom-left-radius: 15px; /* Curved corners if needed */
+}
+
+.call-button:hover, .email-button:hover {
+    background-color: #32cd5b; /* A darker lemon green for hover effect */
+}
+
+.service-text {
+    flex-grow: 1;
+    text-align: center;
+    padding: 0 10px;
+}
+
+.top-white-card a.phone-link, .top-white-card a.email-link {
+    color: white; /* Ensuring the links are white to match the button text */
+    text-decoration: none; /* No underline for links */
+    display: block; /* Make the link fill the button for a larger clickable area */
+}
+
+.top-white-card .service-text .phone-number, .top-white-card .service-text .email-address {
+    color: #333; /* Color for the text inside the service-text */
+    margin: 5px 0; /* Space out the phone and email lines */
+}
+
+.top-white-card .service-text a {
+    color: #00AC13; /* Color for the links inside the service-text */
+    text-decoration: none; /* Optionally remove underline from links */
+}
+
+.top-white-card .service-text a:hover {
+    text-decoration: underline; /* Add underline on hover for better user indication */
+}
+/* call card end */
+
+
+
+
+
+/* Heading and first white card Responsive styles for smaller screens heading start */
+@media (max-width: 768px) {
+    .logo {
+        max-width: 100px; /* Set a smaller maximum width for small screens */
+        margin-left: 10px; /* Adjust as needed for spacing */
+        margin-top: 0; /* Adjust if necessary */
+        margin-bottom: 0; /* Adjust if necessary */
+    }
+    
+    #nav-menu {
+        position: absolute;
+        top: 60px; /* Height of the header */
+        left: 0;
+        right: 0;
+        background-color: #00AC13;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start; /* Align menu items to the start */
+        width: 100%;
+        padding-left: 20px; /* Padding to match the logo container */
+    }
+    
+    #nav-menu ul {
+        width: 100%;
+        flex-direction: column;
+        padding: 0;
+    }
+    
+    #nav-menu ul li {
+        width: 100%;
+        text-align: right;
+    }
+    
+    #nav-menu ul li a {
+        display: block;
+        padding: 10px 20px; /* Add horizontal padding */
+    }
+
+
+    /* This class is toggled on/off by the JavaScript */
+    .nav-menu-visible {
+        display: flex !important; /* Force the menu to be visible */
+        flex-direction: column;
+        position: absolute; /* Absolute positioning for the dropdown */
+        top: 50px; /* Adjust this value to the height of your header */
+        left: 0;
+        right: 0;
+        display: none;
+    }
+
+    #nav-icon {
+        display: block; /* Show the menu icon on small screens */
+    }
+
+    #nav-menu.nav-menu-visible {
+        display: flex; /* Ensure this matches the class toggled by JavaScript */
+    }
+
+
+
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start; /* Align items to the start of the container */
+        position: relative;
+    }
+
+    .logo-container {
+        order: -1; /* This ensures the logo stays on top */
+        width: 100%; /* Allow the logo container to fill the width */
+        display: flex;
+        justify-content: center; /* Space between logo and toggle menu or use center to center the logo when the nave is toggled*/
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute; /* Ensure it's positioned relative to its parent */
+        top: 10px; /* Adjust as necessary */
+        right: 10px; /* Adjust as necessary */
+
+    }
+
+
+    .nav-menu-visible + .top-white-card {
+        /* Remove or adjust styles that were previously positioning the card below the menu */
+        margin-top: 160px; /* Maintain the margin at the top */
+    }
+
+    #nav-menu.nav-menu-visible + .top-white-card {
+        margin-top: 160px; /* Adjust this value so it moves down when the toggle is open */
+    }
+    
+    
+    .content-container {
+        flex-direction: column;
+   }
+/* Responsive styles for smaller screens heading end */
+
+}
+
+/* Ensure the container for the following content starts below the fixed card */
+.main-content {
+    padding-top: 100px; /* Adjust this value to match the height of your fixed header */
+}
+
+.content-below-card {
+    padding-top: 100px; /* Adjust this value so the content starts below the fixed card */
+}
+
+
+/* about start */
+
+/* Main styling for the green card container */
+.about-green-card {
+    background-color: #00AC13; /* Green background */
+    padding: 20px; /* Spacing around the white card */
+    text-align: center; /* Centering the content */
+}
+
+/* Styling for the white card */
+.about-white-card {
+    background-color: #fff; /* White background */
+    padding: 20px; /* Padding inside the white card */
+    margin: auto; /* Center the card if needed */
+    max-width: 800px; /* Max width of the card, can be adjusted as needed */
+    color: #000; /* Black text color for the content */
+}
+
+/* Green text styling */
+.green-text {
+    color: green; /* Green color for specific sentences */
+    font-weight: bold; /* Optional: making it bold */
+    display: block; /* Display as block to ensure it's on a new line */
+}
+
+/* You may want to add additional global styling for the body or p tags */
+body {
+    font-family: Arial, sans-serif; /* Example font */
+}
+
+p {
+    text-align: justify; /* Justify the paragraph text if desired */
+    line-height: 1.6; /* Adjust line height for readability */
+}
+
+
+/* Footer */
+.footer {
+    background-color: #333333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+/* Footer end*/
