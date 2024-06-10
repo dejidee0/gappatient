@@ -32,7 +32,7 @@ if (isset($_POST['comment']) && !empty($_POST['comment']) && isset($_POST['g-rec
     $captcha = $_POST['g-recaptcha-response'];
 
     // Verify CAPTCHA
-    $secretKey = "6LdVX_UpAAAAAD21poxoHnX4lvqUwseOUlWuJ1xO";
+    $secretKey = "6LeTY_UpAAAAAKtWxoGesEALQeLhl_nTaJBBH_Hy";
     $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret={$secretKey}&response={$captcha}");
     $responseKeys = json_decode($response, true);
 
