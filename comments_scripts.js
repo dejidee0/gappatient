@@ -6,7 +6,7 @@ document.getElementById('viewComments').addEventListener('click', function() {
             document.getElementById("commentsSection").style.display = "block";
         }
     };
-    xhttp.open("GET", "load_comments.php", true);
+    xhttp.open("GET", "/.netlify/functions/loadComments", true); // Updated endpoint
     xhttp.send();
 });
 
@@ -16,7 +16,7 @@ function loadComments() {
         commentsSection.style.display = 'none';
     } else {
         var xhr = new XMLHttpRequest();
-        xhr.open('GET', 'http://localhost:8080/load_comments.php', true);
+        xhr.open('GET', '/.netlify/functions/loadComments', true); // Updated endpoint
         xhr.onload = function() {
             if (this.status === 200) {
                 commentsSection.innerHTML = this.responseText;
@@ -74,4 +74,3 @@ function displaySuccessMessage(message) {
         successMessage.style.display = 'none';
     }, 4000);
 }
-
