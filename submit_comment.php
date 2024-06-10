@@ -23,7 +23,6 @@ if ($conn->connect_error) {
     die("Database connection failed: " . $conn->connect_error);
 }
 
-
 // Check if comment POST data is received
 if (isset($_POST['comment']) && !empty($_POST['comment']) && isset($_POST['g-recaptcha-response'])) {
     // Collect the user type from the POST request
@@ -33,7 +32,7 @@ if (isset($_POST['comment']) && !empty($_POST['comment']) && isset($_POST['g-rec
     $captcha = $_POST['g-recaptcha-response'];
 
     // Verify CAPTCHA
-    $secretKey = "6LdhOZUpAAAAAKMtlgljrbal4wjddWfk-k-XWLvQ";
+    $secretKey = "6LdVX_UpAAAAAD21poxoHnX4lvqUwseOUlWuJ1xO";
     $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret={$secretKey}&response={$captcha}");
     $responseKeys = json_decode($response, true);
 
@@ -51,7 +50,6 @@ if (isset($_POST['comment']) && !empty($_POST['comment']) && isset($_POST['g-rec
         echo 'Comment successfully saved.';
         $response = ['commentStatus' => 'Comment successfully saved.'];
         // send email...
-        // Replace the below credentials with your SMTP credentials.
         $mail = new PHPMailer(true);
         try {
             $mail->SMTPDebug = 0;  // Disable verbose debug output
@@ -67,11 +65,7 @@ if (isset($_POST['comment']) && !empty($_POST['comment']) && isset($_POST['g-rec
             $mail->addReplyTo($email, 'Commenter'); // Commenter's email
             $mail->addAddress($email, 'Joe User'); // Add a recipient
 
-            //Recipients
-            $mail->setFrom('ejenamvictor76@gmail.com', 'Mailer');
-            $mail->addAddress('ejenamvictor76@gmail.com', 'Recipient Name');     // Add a recipient
-
-            $mail->isHTML(true);                                  // Set email format to HTML
+            $mail->isHTML(true); // Set email format to HTML
             $mail->Subject = 'New Comment Posted';
             $mail->Body    = 'A new comment has been posted: ' . $comment;
             $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
@@ -91,3 +85,4 @@ if (isset($_POST['comment']) && !empty($_POST['comment']) && isset($_POST['g-rec
 }
 
 $conn->close();
+?>
